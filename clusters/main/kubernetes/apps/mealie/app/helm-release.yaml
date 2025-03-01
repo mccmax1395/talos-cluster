@@ -5,16 +5,20 @@ metadata:
   namespace: mealie
 spec:
   interval: 15m
-  chart:
-    spec:
-      chart: mealie
-      version: latest
-      sourceRef:
-        kind: OCIRepository
-        name: mealie
-        namespace: flux-system
-      interval: 15m
-  timeout: 20m
+  chartRef:
+    kind: OCIRepository
+    name: mealie
+    namespace: flux-system
+  # chart:
+  #   spec:
+  #     chart: mealie
+  #     version: latest
+  #     sourceRef:
+  #       kind: OCIRepository
+  #       name: mealie
+  #       namespace: flux-system
+  #     interval: 15m
+  # timeout: 20m
   maxHistory: 3
   driftDetection:
     mode: warn
