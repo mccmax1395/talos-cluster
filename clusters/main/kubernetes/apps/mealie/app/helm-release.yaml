@@ -3,6 +3,8 @@ kind: HelmRelease
 metadata:
   name: mealie
   namespace: mealie
+  annotations:
+    flux-redeploy: "true"
 spec:
   interval: 15m
   chart:
