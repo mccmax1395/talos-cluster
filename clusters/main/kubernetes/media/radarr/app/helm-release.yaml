@@ -39,6 +39,9 @@ spec:
     persistence:
       config:
         enabled: false
+        type: nfs
+        mountPath: ""
+        nfs: {}
       media:
         enabled: true
         type: nfs
