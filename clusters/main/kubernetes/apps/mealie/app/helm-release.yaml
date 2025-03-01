@@ -34,7 +34,7 @@ spec:
     service:
       main:
         type: LoadBalancer
-        loadBalancerIP: ${MEALIE_IP}
+        loadBalancerIP: 192.168.1.217
         ports:
           main:
             port: 9000 # Default mealie port
