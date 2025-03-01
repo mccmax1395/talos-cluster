@@ -37,6 +37,8 @@ spec:
           main:
             port: 7878 # Default Radarr port
     persistence:
+      config:
+        enabled: false
       media:
         enabled: true
         type: nfs
