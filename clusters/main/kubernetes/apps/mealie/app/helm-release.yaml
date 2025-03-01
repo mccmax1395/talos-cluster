@@ -36,10 +36,3 @@ spec:
         ports:
           main:
             port: 9000 # Default mealie port
-    persistence:
-      media:
-        enabled: true
-        type: nfs
-        path: /mnt/playground/media
-        mountPath: /Media
-        server: 192.168.1.98
