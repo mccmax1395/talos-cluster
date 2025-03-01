@@ -40,6 +40,6 @@ spec:
       media:
         enabled: true
         type: nfs
-        path: /mnt/playground/media
+        path: /mnt/playground/media/Media_NFS_SHARE
         mountPath: /media
         server: 192.168.1.98
