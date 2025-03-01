@@ -5,20 +5,16 @@ metadata:
   namespace: mealie
 spec:
   interval: 15m
-  chartRef:
-    kind: OCIRepository
-    name: mealie
-    namespace: flux-system
-  # chart:
-  #   spec:
-  #     chart: mealie
-  #     version: latest
-  #     sourceRef:
-  #       kind: OCIRepository
-  #       name: mealie
-  #       namespace: flux-system
-  #     interval: 15m
-  # timeout: 20m
+  chart:
+    spec:
+      chart: mealie
+      version: 24.7.0
+      sourceRef:
+        kind: HelmRepository
+        name: truecharts
+        namespace: flux-system
+      interval: 15m
+  timeout: 20m
   maxHistory: 3
   driftDetection:
     mode: warn
