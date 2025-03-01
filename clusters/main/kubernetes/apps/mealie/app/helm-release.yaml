@@ -8,11 +8,10 @@ spec:
   chart:
     spec:
       chart: mealie
-      version: 24.7.0
+      version: latest
       sourceRef:
         kind: OCIRepository
         name: mealie
-        version: nightly
         namespace: flux-system
       interval: 15m
   timeout: 20m
