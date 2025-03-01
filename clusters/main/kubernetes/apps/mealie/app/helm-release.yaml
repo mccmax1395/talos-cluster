@@ -4,7 +4,7 @@ metadata:
   name: mealie
   namespace: mealie
   annotations:
-    flux-redeploy: "true"
+    flux-redeploy: "idk"
 spec:
   interval: 15m
   chart:
