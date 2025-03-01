@@ -1,5 +1,5 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: OCIRepository
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
 metadata:
   name: mealie
   namespace: mealie
@@ -7,9 +7,13 @@ spec:
   interval: 15m
   chart:
     spec:
-      url: oci://ghcr.io/mealie-recipes/mealie
-      ref:
-        tag: nightly
+      chart: mealie
+      version: 24.7.0
+      sourceRef:
+        kind: OCIRepository
+        name: mealie
+        version: nightly
+        namespace: flux-system
       interval: 15m
   timeout: 20m
   maxHistory: 3
