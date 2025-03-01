@@ -37,16 +37,10 @@ spec:
           main:
             port: 7878 # Default Radarr port
     persistence:
-      config:
-        enabled: false
-        type: nfs
-        mountPath: ""
-        nfs: {}
       media:
         enabled: true
         type: nfs
+        path: /mnt/playground/media
         mountPath: "/Media"
-        nfs:
-           path: /mnt/playground/media
-           server: 192.168.1.98
+        server: 192.168.1.98
 
