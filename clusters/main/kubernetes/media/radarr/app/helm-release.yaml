@@ -36,6 +36,8 @@ spec:
         ports:
           main:
             port: 7878 # Default Radarr port
+        annotations:
+          metallb.universe.tf/allow-shared-ip: "true"
     persistence:
       media:
         enabled: true

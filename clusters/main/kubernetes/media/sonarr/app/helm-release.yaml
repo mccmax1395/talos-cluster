@@ -36,6 +36,8 @@ spec:
         ports:
           main:
             port: 8989 # Default sonarr port
+        annotations:
+          metallb.universe.tf/allow-shared-ip: "true"
     persistence:
       media:
         enabled: true
