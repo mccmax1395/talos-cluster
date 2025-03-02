@@ -32,7 +32,7 @@ spec:
     service:
       main:
         type: LoadBalancer
-        loadBalancerIP: ${MEDIA_IP}
+        loadBalancerIP: ${SONARR_IP}
         ports:
           main:
             port: 8989 # Default sonarr port

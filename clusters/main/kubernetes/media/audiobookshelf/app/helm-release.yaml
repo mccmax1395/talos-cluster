@@ -32,7 +32,7 @@ spec:
     service:
       main:
         type: LoadBalancer
-        loadBalancerIP: ${MEDIA_IP}
+        loadBalancerIP: ${AUDIOBOOKSHELF_IP}
         ports:
           main:
             port: 13378 # Default sonarr port
