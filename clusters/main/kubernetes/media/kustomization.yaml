@@ -6,3 +6,4 @@ resources:
   - sonarr/ks.yaml
   - audiobookshelf/ks.yaml
   - pvc.yaml
+  - jellyseerr/ks.yaml
