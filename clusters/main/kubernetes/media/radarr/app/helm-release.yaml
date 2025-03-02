@@ -40,7 +40,8 @@ spec:
       media:
         enabled: true
         type: nfs
-        server: ${TRUENAS_IP}
-        path: ${MEDIA_NFS_PATH}
+        path: /mnt/playground/media
         mountPath: "/Media"
+        server: 192.168.1.98
+
 
