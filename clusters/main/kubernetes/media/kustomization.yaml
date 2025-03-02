@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - radarr/ks.yaml
   - sonarr/ks.yaml
+  - audiobookshelf/ks.yaml
