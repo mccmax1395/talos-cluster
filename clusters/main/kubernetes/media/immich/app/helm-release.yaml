@@ -101,7 +101,7 @@ spec:
             main: {}
           microservices:
             microservices: {}
-       video:
+      video:
         enabled: true
         type: nfs
         path: /mnt/playground/media/immich/encoded-video
