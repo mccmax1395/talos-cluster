@@ -39,16 +39,10 @@ spec:
         annotations:
           metallb.universe.tf/allow-shared-ip: "true"
     persistence:
-      media:
-        enabled: true
-        type: nfs
-        path: /mnt/playground/media
-        mountPath: "/Media"
-        server: 192.168.1.98
       thumbs:
         enabled: true
         type: nfs
-        path: /mnt/playground/media/photos/thumbs
+        path: /mnt/playground/media/immich/thumbs
         mountPath: "/usr/src/app/upload/thumbs"
         server: 192.168.1.98
         targetSelector:
@@ -60,8 +54,56 @@ spec:
       uploads:
         enabled: true
         type: nfs
-        path: /mnt/playground/media/photos/uploads
+        path: /mnt/playground/media/immich/uploads
         mountPath: /usr/src/app/upload/upload
+        server: 192.168.1.98
+        targetSelector:
+          # Main pod/container is server
+          main:
+            main: {}
+          microservices:
+            microservices: {}
+      library:
+        enabled: true
+        type: nfs
+        path: /mnt/playground/media/immich/library
+        mountPath: /usr/src/app/upload/library
+        server: 192.168.1.98
+        targetSelector:
+          # Main pod/container is server
+          main:
+            main: {}
+          microservices:
+            microservices: {}
+      backups:
+        enabled: true
+        type: nfs
+        path: /mnt/playground/media/immich/backups
+        mountPath: /usr/src/app/upload/backups
+        server: 192.168.1.98
+        targetSelector:
+          # Main pod/container is server
+          main:
+            main: {}
+          microservices:
+            microservices: {}
+      profile:
+        enabled: true
+        type: nfs
+        path: /mnt/playground/media/immich/profile
+        mountPath: /usr/src/app/upload/profile
+        server: 192.168.1.98
+        targetSelector:
+          # Main pod/container is server
+          main:
+            main: {}
+          microservices:
+            microservices: {}
+       video:
+        enabled: true
+        type: nfs
+        path: /mnt/playground/media/immich/encoded-video
+        mountPath: /usr/src/app/upload/encoded-video
         server: 192.168.1.98
         targetSelector:
           # Main pod/container is server
