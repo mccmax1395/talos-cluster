@@ -45,4 +45,27 @@ spec:
         path: /mnt/playground/media
         mountPath: "/Media"
         server: 192.168.1.98
-
+      thumbs:
+        enabled: true
+        type: nfs
+        path: /mnt/playground/media/photos/thumbs
+        mountPath: "/usr/src/app/upload/thumbs"
+        server: 192.168.1.98
+        targetSelector:
+        # Main pod/container is server
+          main:
+            main: {}
+          microservices:
+            microservices: {}
+      uploads:
+        enabled: true
+        type: nfs
+        path: /mnt/playground/media/photos/uploads
+        mountPath: /usr/src/app/upload/upload
+        server: 192.168.1.98
+        targetSelector:
+          # Main pod/container is server
+          main:
+            main: {}
+          microservices:
+            microservices: {}
