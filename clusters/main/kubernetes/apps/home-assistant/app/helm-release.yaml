@@ -36,4 +36,4 @@ spec:
         loadBalancerIP: ${HOMEASSISTANT_IP}
         ports:
           main:
-            port: 8124
+            port: 8123
