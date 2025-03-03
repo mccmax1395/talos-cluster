@@ -3,6 +3,8 @@ kind: HelmRelease
 metadata:
   name: immich
   namespace: media
+  annotations:
+    test: force update
 spec:
   interval: 15m
   chart:
