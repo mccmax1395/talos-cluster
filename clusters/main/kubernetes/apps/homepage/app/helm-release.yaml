@@ -30,13 +30,26 @@ spec:
     keepHistory: false
   values:
     forceConfigFromValues: true
-    service:
-      main:
-        type: LoadBalancer
-        loadBalancerIP: ${HOMEPAGE_IP}
-        ports:
-          main:
-            port: 9000 # Default homepage port
+    ingress:
+        main:
+          enabled: true
+          integrations:
+            traefik:
+              enabled: true
+              entrypoints:
+              - websecure
+              middlewares:
+              - name: auth
+                namespace: 'traefik'
+            certManager:
+              enabled: true
+              certificateIssuer: domain-0-le-prod
+          hosts:
+            - host: homepage.${DOMAIN_0}
+              paths:
+                - path: /
+                  pathType: Prefix
+      persistence:
     configmap:
       config:
         enabled: true
