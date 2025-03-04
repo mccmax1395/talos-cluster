@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
   - kubernetes-dashboard/ks.yaml
   - mealie/ks.yaml
+  - homepage/ks.yaml
   # - home-assistant (disabled)/ks.yaml
