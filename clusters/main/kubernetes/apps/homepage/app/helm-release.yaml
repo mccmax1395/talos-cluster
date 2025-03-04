@@ -31,25 +31,24 @@ spec:
   values:
     forceConfigFromValues: true
     ingress:
-        main:
-          enabled: true
-          integrations:
-            traefik:
-              enabled: true
-              entrypoints:
-              - websecure
-              middlewares:
-              - name: auth
-                namespace: 'traefik'
-            certManager:
-              enabled: true
-              certificateIssuer: domain-0-le-prod
-          hosts:
-            - host: homepage.${DOMAIN_0}
-              paths:
-                - path: /
-                  pathType: Prefix
-      persistence:
+      main:
+        enabled: true
+        integrations:
+          traefik:
+            enabled: true
+            entrypoints:
+            - websecure
+            middlewares:
+            - name: auth
+              namespace: 'traefik'
+          certManager:
+            enabled: true
+            certificateIssuer: domain-0-le-prod
+        hosts:
+          - host: homepage.${DOMAIN_0}
+            paths:
+              - path: /
+                pathType: Prefix
     configmap:
       config:
         enabled: true
