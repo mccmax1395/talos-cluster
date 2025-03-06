@@ -50,7 +50,7 @@ spec:
     addons:
       vpn:
         type: gluetun
-        killSwitch: false
+        killSwitch: true
         excludedNetworks_IPv4:
           - "192.168.1.0/24"
         excludedNetworks_IPv6: []
