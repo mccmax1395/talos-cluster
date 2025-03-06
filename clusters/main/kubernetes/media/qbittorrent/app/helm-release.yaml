@@ -45,18 +45,15 @@ spec:
         path: /mnt/playground/media
         mountPath: "/Media"
         server: 192.168.1.98
-addons:
-  vpn:
-    type: gluetun
-    killSwitch: true
-    excludedNetworks_IPv4:
-      - "192.168.1.0/24"
-    excludedNetworks_IPv6: []
-    env:
-      VPN_SERVICE_PROVIDER: "purevpn"
-      VPN_TYPE: "openvpn"
-      OPENVPN_USER: ${VPN_USERNAME}
-      OPENVPN_PASSWORD: ${VPN_PASSWORD}
-
-
-
+    addons:
+      vpn:
+        type: gluetun
+        killSwitch: true
+        excludedNetworks_IPv4:
+          - "192.168.1.0/24"
+        excludedNetworks_IPv6: []
+        env:
+          VPN_SERVICE_PROVIDER: "purevpn"
+          VPN_TYPE: "openvpn"
+          OPENVPN_USER: ${VPN_USERNAME}
+          OPENVPN_PASSWORD: ${VPN_PASSWORD}
