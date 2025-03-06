@@ -36,8 +36,6 @@ spec:
         ports:
           main:
             port: 10095 # Default qbittorrent port
-        annotations:
-          kubectl.kubernetes.io/restartedAt: "2025-03-01T12:34:56Z"
     persistence:
       media:
         enabled: true
@@ -45,6 +43,10 @@ spec:
         path: /mnt/playground/media
         mountPath: "/Media"
         server: 192.168.1.98
+     qbittorrent:
+      extraEnv:
+        - name: WEBUI_HOST
+          value: "0.0.0.0"
     addons:
       vpn:
         type: gluetun
