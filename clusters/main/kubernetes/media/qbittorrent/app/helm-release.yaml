@@ -35,7 +35,7 @@ spec:
         loadBalancerIP: ${QBITTORRENT_IP}
         ports:
           main:
-            port: 10097 # Default qbittorrent port
+            port: 10095 # Default qbittorrent port
     persistence:
       media:
         enabled: true
