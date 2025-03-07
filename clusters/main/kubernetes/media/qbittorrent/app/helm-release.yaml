@@ -4,6 +4,7 @@ metadata:
   name: qbittorrent
   namespace: media
 spec:
+  suspend: true 
   interval: 15m
   chart:
     spec:
