@@ -50,7 +50,7 @@ spec:
         expandObjectName: false
         optional: false
         defaultMode: "0777"
-        mountPath: /config/qBittorrent/qBittorrent.conf
+        mountPath: /config/qBittorrent
         subpath: qBittorrent.conf
         items:
           - key:  qBittorrent.conf
