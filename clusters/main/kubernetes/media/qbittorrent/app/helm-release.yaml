@@ -45,6 +45,7 @@ spec:
         server: 192.168.1.98
        # Add custom configuration mounting
       qbittorrent:
+        enabled: true
         extraVolumes:
           - name: custom-config
             configMap:
