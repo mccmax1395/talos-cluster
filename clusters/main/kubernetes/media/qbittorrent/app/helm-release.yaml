@@ -58,7 +58,7 @@ spec:
         targetSelector:
           main:
             main:
-              mountPath: /config/qBittorrent/qBittorrent.conf
+              mountPath: /config/qBittorrent
               subpath: qBittorrent.conf
 
 
