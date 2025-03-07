@@ -51,9 +51,6 @@ spec:
         expandObjectName: false
         optional: false
         defaultMode: "0777"
-        items:
-          - key: qbittorrent-custom-config
-            path: /config/qBittorrent.conf
 
     addons:
       vpn:
