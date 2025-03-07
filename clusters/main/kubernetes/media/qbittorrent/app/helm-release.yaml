@@ -44,16 +44,19 @@ spec:
         mountPath: "/Media"
         server: 192.168.1.98
        # Add custom configuration mounting
+      configmap:
+
       qbittorrent:
         enabled: true
-        extraVolumes:
-          - name: custom-config
-            configMap:
-              name: qbittorrent-custom-config
-        extraVolumeMounts:
-          - name: custom-config
-            mountPath: /config/qBittorrent.conf
-            subPath: qBittorrent.conf
+        type: config-map
+        objectName: configmap-name
+        expandObjectName: false
+        optional: false
+        defaultMode: "0777"
+        items:
+          - key: qbittorrent-custom-config
+            path: /config/qBittorrent.conf
+
     addons:
       vpn:
         type: gluetun
