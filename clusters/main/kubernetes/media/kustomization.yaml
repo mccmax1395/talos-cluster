@@ -8,4 +8,4 @@ resources:
   - jellyseerr/ks.yaml
   - immich/ks.yaml
   - jellyfin/ks.yaml
-  - qbittorrent/ks.yaml
+  # - qbittorrent/ks.yaml
