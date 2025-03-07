@@ -60,6 +60,7 @@ spec:
             main:
               mountPath: /config/qBittorrent
               subpath: qBittorrent.conf
+              readOnly: false
 
 
     addons:
