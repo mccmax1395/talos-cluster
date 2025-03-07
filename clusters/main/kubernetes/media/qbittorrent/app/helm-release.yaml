@@ -47,7 +47,6 @@ spec:
         enabled: true
         type: configmap
         objectName: qbittorrent-custom-config
-        expandObjectName: false
         optional: false
         defaultMode: "0777"
         # mountPath: /config/qBittorrent
@@ -58,7 +57,7 @@ spec:
         targetSelector:
           main:
             main:
-              mountPath: /config/qBittorrent
+              mountPath: /config/qBittorrent/qBittorrent.conf
               subpath: qBittorrent.conf
               readOnly: false
 
