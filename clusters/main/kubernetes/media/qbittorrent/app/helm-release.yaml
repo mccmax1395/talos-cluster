@@ -45,6 +45,7 @@ spec:
         server: 192.168.1.98
       configmap-vol:
         enabled: true
+        expandObjectName: false
         type: configmap
         objectName: qbittorrent-custom-config
         optional: false
