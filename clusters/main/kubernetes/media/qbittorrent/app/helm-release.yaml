@@ -43,6 +43,16 @@ spec:
         path: /mnt/playground/media
         mountPath: "/Media"
         server: 192.168.1.98
+       # Add custom configuration mounting
+      qbittorrent:
+        extraVolumes:
+          - name: custom-config
+            configMap:
+              name: qbittorrent-custom-config
+        extraVolumeMounts:
+          - name: custom-config
+            mountPath: /config/qBittorrent.conf
+            subPath: qBittorrent.conf
     addons:
       vpn:
         type: gluetun
