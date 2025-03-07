@@ -43,7 +43,7 @@ spec:
         path: /mnt/playground/media
         mountPath: "/Media"
         server: 192.168.1.98
-     configmap-vol:
+      configmap-vol:
         enabled: true
         type: config-map
         mountPath: /config/qBittorrent.conf
