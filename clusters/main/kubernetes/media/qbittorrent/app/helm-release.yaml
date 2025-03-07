@@ -57,6 +57,7 @@ spec:
           qbittorrent:
             qbittorrent:
               mountPath: /config/qBittorrent/
+              subpath: qBittorrent.conf
 
 
     addons:
