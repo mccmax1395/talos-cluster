@@ -50,16 +50,16 @@ spec:
         expandObjectName: false
         optional: false
         defaultMode: "0777"
-        mountPath: /config/qBittorrent
-        subpath: qBittorrent.conf
+        # mountPath: /config/qBittorrent
+        # subpath: qBittorrent.conf
         items:
           - key:  qBittorrent.conf
             path: qBittorrent.conf
-        # targetSelector:
-        #   qbittorrent:
-        #     qbittorrent:
-        #       mountPath: /config/qBittorrent/qBittorrent.conf
-        #       subpath: qBittorrent.conf
+        targetSelector:
+          main:
+            main:
+              mountPath: /config/qBittorrent/qBittorrent.conf
+              subpath: qBittorrent.conf
 
 
     addons:
