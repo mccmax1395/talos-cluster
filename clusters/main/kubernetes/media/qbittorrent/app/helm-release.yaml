@@ -43,23 +43,23 @@ spec:
         path: /mnt/playground/media
         mountPath: "/Media"
         server: 192.168.1.98
-      # configmap-vol:
-      #   enabled: true
-      #   type: configmap
-      #   objectName: qbittorrent-custom-config
-      #   expandObjectName: false
-      #   optional: false
-      #   defaultMode: "0777"
-      #   # mountPath: /config/qBittorrent
-      #   # subpath: qBittorrent.conf
-      #   items:
-      #     - key:  qBittorrent.conf
-      #       path: qBittorrent.conf
-      #   targetSelector:
-      #     qbittorrent:
-      #       qbittorrent:
-      #         mountPath: /config/qBittorrent/qBittorrent.conf
-      #         subpath: qBittorrent.conf
+      configmap-vol:
+        enabled: true
+        type: configmap
+        objectName: qbittorrent-custom-config
+        expandObjectName: false
+        optional: false
+        defaultMode: "0777"
+        mountPath: /config/qBittorrent
+        subpath: qBittorrent.conf
+        items:
+          - key:  qBittorrent.conf
+            path: qBittorrent.conf
+        # targetSelector:
+        #   qbittorrent:
+        #     qbittorrent:
+        #       mountPath: /config/qBittorrent/qBittorrent.conf
+        #       subpath: qBittorrent.conf
 
 
     addons:
