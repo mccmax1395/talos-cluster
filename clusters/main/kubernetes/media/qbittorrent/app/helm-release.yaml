@@ -4,7 +4,7 @@ metadata:
   name: qbittorrent
   namespace: media
 spec:
-  suspend: true 
+  # suspend: true 
   interval: 15m
   chart:
     spec:
@@ -44,25 +44,6 @@ spec:
         path: /mnt/playground/media
         mountPath: "/Media"
         server: 192.168.1.98
-      # configmap-vol:
-      #   enabled: true
-      #   expandObjectName: false
-      #   type: configmap
-      #   objectName: qbittorrent-custom-config
-      #   optional: false
-      #   # mountPath: /config/qBittorrent
-      #   # subpath: qBittorrent.conf
-      #   items:
-      #     - key:  qBittorrent.conf
-      #       path: qBittorrent.conf
-      #   targetSelector:
-      #     main:
-      #       main:
-      #         mountPath: /config/qBittorrent/qBittorrent.conf
-      #         subpath: qBittorrent.conf
-      #         readOnly: false
-
-
     addons:
       vpn:
         type: gluetun
@@ -75,3 +56,10 @@ spec:
           VPN_TYPE: "openvpn"
           OPENVPN_USER: ${VPN_USERNAME}
           OPENVPN_PASSWORD: ${VPN_PASSWORD}
+    # workload:
+    #     main:
+    #       podSpec:
+    #         initContainers:
+    #           initconfig:
+    #             enabled: false
+    #             command: "sh /config/mam.sh"
