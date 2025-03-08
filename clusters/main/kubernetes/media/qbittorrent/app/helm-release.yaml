@@ -56,10 +56,10 @@ spec:
           VPN_TYPE: "openvpn"
           OPENVPN_USER: ${VPN_USERNAME}
           OPENVPN_PASSWORD: ${VPN_PASSWORD}
-    # workload:
-    #     main:
-    #       podSpec:
-    #         initContainers:
-    #           initconfig:
-    #             enabled: false
-    #             command: "sh /config/mam.sh"
+    workload:
+        main:
+          podSpec:
+            initContainers:
+              initconfig:
+                enabled: false
+                command: "sh /config/mam.sh"
