@@ -49,7 +49,14 @@ spec:
         mountPath: "/config"
         targetSelectAll: true
 
-
+    services:
+      torrent:
+        enabled: true
+        ports:
+          torrent:
+            enabled: true
+            port: 49999
+            protocol: tcp
     addons:
       vpn:
         type: gluetun
@@ -69,4 +76,6 @@ spec:
               initconfig:
                 type: init
                 enabled: true
-                command: [ "sh", "/config/mam.sh" ]
+                commands: 
+                [ "sh", "/config/mam.sh" ]
+                []
