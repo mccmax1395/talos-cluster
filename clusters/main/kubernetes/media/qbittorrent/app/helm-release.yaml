@@ -61,5 +61,6 @@ spec:
           podSpec:
             initContainers:
               initconfig:
+                type: init
                 enabled: true
                 command: "sh /config/mam.sh"
