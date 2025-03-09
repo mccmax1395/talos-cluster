@@ -38,6 +38,25 @@ spec:
             port: 8989 # Default sonarr port
         annotations:
           metallb.universe.tf/allow-shared-ip: "true"
+    ingress:
+        main:
+          enabled: true
+          integrations:
+            traefik:
+              enabled: true
+              entrypoints:
+              - websecure
+              middlewares:
+              - name: auth
+                namespace: 'traefik'
+            certManager:
+              enabled: true
+              certificateIssuer: domain-0-le-prod
+          hosts:
+            - host: sonarr.${DOMAIN_0}
+              paths:
+                - path: /
+                  pathType: Prefix
     persistence:
       media:
         enabled: true
