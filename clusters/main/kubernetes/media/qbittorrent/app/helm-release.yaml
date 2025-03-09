@@ -68,5 +68,5 @@ spec:
             initContainers:
               initconfig:
                 type: init
-                enabled: false
+                enabled: true
                 command: "sh /config/mam.sh"
