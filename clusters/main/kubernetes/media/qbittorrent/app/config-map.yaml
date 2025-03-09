@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: qbittorrent-custom-config
+  name: qbittorrent-scripts
   namespace: media
 data:
   qBittorrent.conf: |
