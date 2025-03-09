@@ -37,6 +37,13 @@ spec:
         ports:
           main:
             port: 10095 # Default qbittorrent port
+      torrent:
+        enabled: true
+        ports:
+          torrent:
+            enabled: true
+            port: 49999
+            protocol: tcp
     persistence:
       media:
         enabled: true
@@ -49,14 +56,6 @@ spec:
         mountPath: "/config"
         targetSelectAll: true
 
-    service:
-      torrent:
-        enabled: true
-        ports:
-          torrent:
-            enabled: true
-            port: 49999
-            protocol: tcp
     addons:
       vpn:
         type: gluetun
