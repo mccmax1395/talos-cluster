@@ -76,6 +76,4 @@ spec:
               initconfig:
                 type: init
                 enabled: true
-                commands: 
-                [ "sh", "/config/mam.sh" ]
-                []
+                command: [ "sh", "/config/mam.sh" ]
