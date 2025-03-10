@@ -19,7 +19,7 @@ spec:
         name: cilium
         namespace: flux-system
       interval: 15m
-  timeout: 20m
+  timeout: 5m
   maxHistory: 3
   driftDetection:
     mode: warn
@@ -71,7 +71,7 @@ spec:
     ipam:
       mode: kubernetes
     k8sServiceHost: 127.0.0.1
-    k8sServicePort: 7445
+    k8sServicePort: 7446
     kubeProxyReplacement: true
     kubeProxyReplacementHealthzBindAddr: 0.0.0.0:10256
     localRedirectPolicy: true
