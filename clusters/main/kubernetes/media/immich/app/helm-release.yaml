@@ -40,6 +40,8 @@ spec:
             port: 2283 # Default immich port
         annotations:
           metallb.universe.tf/allow-shared-ip: "true"
+    machinelearning:
+      enabled: false
     persistence:
       thumbs:
         enabled: true
