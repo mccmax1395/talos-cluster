@@ -45,8 +45,8 @@ spec:
           integrations:
             traefik:
               enabled: true
-              # entrypoints:
-              # - websecure
+              entrypoints:
+              - websecure
               middlewares:
               - name: auth
                 namespace: 'traefik'
